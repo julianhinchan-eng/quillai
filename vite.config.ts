@@ -1,30 +1,21 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-
-import viteReact from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
+import netlify from "@netlify/vite-plugin-tanstack-start";
+import react from "@vitejs/plugin-react";
 import viteTsConfigPaths from "vite-tsconfig-paths";
-import { VitePWA } from "vite-plugin-pwa";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  server: {
+    port: 3000,
+  },
   plugins: [
-    viteTsConfigPaths({ projects: ["./tsconfig.json"] }),
-    tailwindcss(),
-    
+    netlify(),
     tanstackStart(),
-    viteReact(),
-    VitePWA({
-      registerType: "autoUpdate",
-      injectRegister: null,
-      filename: "sw.js",
-      manifest: false,
-      devOptions: { enabled: false },
-      workbox: {
-        cleanupOutdatedCaches: true,
-        navigateFallback: "/",
-        navigateFallbackDenylist: [/^\/~oauth/, /^\/\.netlify\/functions\//],
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff,woff2}"],
-      },
+    viteTsConfigPaths({
+      projects: ["./tsconfig.json"],
     }),
+    tailwindcss(),
+    react(),
   ],
 });
