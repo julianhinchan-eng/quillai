@@ -1,0 +1,16 @@
+# QuillAI
+
+> QuillAI is an AI-powered assistant offering unlimited text chat, multimodal image analysis, document summarization, AI image and video generation, 3D model creation, and real-time voice conversation.
+
+QuillAI combines advanced language models (Google Gemini 2.5 Flash), image generation (Gemini 2.5 Flash Image), video generation (Runway Veo 3.1 Fast & Gen-4 Turbo), 3D modeling (Tripo3D), and real-time voice (OpenAI GPT-4o mini Realtime) into a single platform. Users can chat for free, with optional premium tiers unlocking higher quotas for images, videos, 3D models, and live voice minutes.
+
+## Pages
+
+- [/](/): Landing page with feature overview and pricing tiers.
+- [/ai-chat](/ai-chat): The main AI chat interface for text, image, document, and voice conversations.
+- [/quillai-info](/quillai-info): Detailed feature breakdown of QuillAI capabilities and premium benefits.
+- [/3d-kreator](/3d-kreator): 3D model creator — generate detailed 3D objects from text descriptions or reference images.
+- [/3d-kreaturen](/3d-kreaturen): Gallery of 3D creatures and models created with the 3D Kreator.
+- [/safety](/safety): Safety guidelines and responsible AI usage policies.
+- [/privacy](/privacy): Privacy policy and data handling practices.
+- [/terms](/terms): Terms of service and user agreement.
