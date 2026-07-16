@@ -1,0 +1,1 @@
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS ai_chats_used integer NOT NULL DEFAULT 0;
