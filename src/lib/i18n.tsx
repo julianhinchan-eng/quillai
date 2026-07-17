@@ -262,7 +262,7 @@ const en: Dict = {
   "landing.highlight1_title": "Free Text Chat",
   "landing.highlight1_desc": "Unlimited conversations with QuillAI – free for every registered user. Perfect for brainstorming, research, translation and quick answers.",
   "landing.highlight2_title": "Premium Image Generation",
-  "landing.highlight2_desc": "Describe what you want to see – QuillAI creates high-quality AI images in seconds. Choose between Google Gemini 2.5 Flash Image, FLUX.1 Fast and Lustify V8 (Civitai SDXL checkpoint, NSFW-capable, €0.05/image). Includes intelligent Image-to-Image to transform your own photos into new styles directly in chat using text prompts. Standard Pro: 500 images per month ($3.90). Ultimate Video: 900 images per month ($10.00).",
+  "landing.highlight2_desc": "Create high-quality AI images in seconds. Choose between Google Gemini 2.5 Flash Image, FLUX.1 Fast and Lustify V8 for uncensored image generation. Transform your own photos into new styles directly with text prompts using Image-to-Image. Standard Pro: 500 images/month for €3.90. Ultimate Video: 900 images/month for €10.00.",
   "landing.highlight3_title": "Premium Document & Image Analysis",
   "landing.highlight3_desc": "Upload PDFs, DOCX, TXT, CSV or photos and let QuillAI summarize, explain or search the content. Included in every Premium tier (from $3.90 per month).",
   "landing.highlight4_title": "AI Video Generation",
