@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 });
 
 function SectionFrame({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <div className={className}>{children}</div>;
+  return <div className={`box-border w-full min-w-0 max-w-full ${className}`}>{children}</div>;
 }
 
 function Landing() {
@@ -38,7 +38,7 @@ function Landing() {
   }, [navigate]);
 
   return (
-    <div className="relative min-h-screen bg-background flex flex-col">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background flex flex-col">
       <header className="relative px-6 py-5 flex items-center justify-between max-w-7xl mx-auto w-full z-10">
         <Link to="/" className="text-xl font-semibold tracking-tight">quillai.online</Link>
         <div className="flex items-center gap-2 md:gap-3">
