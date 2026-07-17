@@ -27,7 +27,7 @@ const de: Dict = {
   "landing.highlight1_title": "Kostenloser Text-Chat",
   "landing.highlight1_desc": "Unbegrenzte Unterhaltungen mit QuillAI – kostenlos für alle registrierten Nutzer. Ideal für Brainstorming, Recherche, Übersetzungen und schnelle Antworten.",
   "landing.highlight2_title": "Premium Bildgenerierung",
-  "landing.highlight2_desc": "Beschreibe einfach, was du sehen willst – QuillAI erstellt hochwertige KI-Bilder in Sekunden. Wähle zwischen Google Gemini 2.5 Flash Image, FLUX.1 Schnell und Lustify V8 (Civitai SDXL-Checkpoint, NSFW-fähig, 0,05 €/Bild). Inklusive intelligentem Image-to-Image, um deine eigenen Fotos direkt im Chat per Textbefehl in neue Stile zu verwandeln. Standard Pro: 500 Bilder im Monat für 3,90 €. Ultimate Video: 900 Bilder im Monat für 10,00 €.",
+  "landing.highlight2_desc": "Erstelle hochwertige KI-Bilder in Sekunden. Wähle zwischen Google Gemini 2.5 Flash Image, FLUX.1 Schnell und Lustify V8 für unzensierte Bildgenerierung. Verwandle mit Image-to-Image auch eigene Fotos direkt per Textbefehl in neue Stile. Standard Pro: 500 Bilder/Monat für 3,90 €. Ultimate Video: 900 Bilder/Monat für 10,00 €.",
   "landing.highlight3_title": "Premium Dokumenten- & Bildanalyse",
   "landing.highlight3_desc": "Lade PDFs, DOCX, TXT, CSV oder Fotos hoch und lass QuillAI Inhalte zusammenfassen, erklären oder durchsuchen. In jedem Premium-Tarif enthalten (ab 3,90 € im Monat).",
   "landing.highlight4_title": "Kreative KI-Videogenerierung",
