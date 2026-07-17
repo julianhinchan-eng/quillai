@@ -7,11 +7,11 @@ export default async (request: Request) => {
   }
 
   try {
-    const apiKey = Netlify.env.get("OPENAI_API_KEY");
+    const apiKey = Netlify.env.get("GEMINI_API_KEY");
 
     if (!apiKey) {
       return Response.json(
-        { error: "OPENAI_API_KEY is not configured" },
+        { error: "GEMINI_API_KEY is not configured" },
         { status: 500 }
       );
     }
@@ -26,17 +26,27 @@ export default async (request: Request) => {
       );
     }
 
+    const contents = messages
+      .filter(
+        (message: any) =>
+          message &&
+          typeof message.content === "string" &&
+          message.content.trim()
+      )
+      .map((message: any) => ({
+        role: message.role === "assistant" ? "model" : "user",
+        parts: [{ text: message.content }],
+      }));
+
     const response = await fetch(
-      "https://api.openai.com/v1/chat/completions",
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${apiKey}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "gpt-4o-mini",
-          messages,
+          contents,
         }),
       }
     );
@@ -44,17 +54,23 @@ export default async (request: Request) => {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("OpenAI API error:", data);
+      console.error("Gemini API error:", data);
 
       return Response.json(
-        { error: "AI request failed", details: data },
+        {
+          error: "Gemini request failed",
+          details: data,
+        },
         { status: response.status }
       );
     }
 
-    return Response.json({
-      message: data.choices?.[0]?.message?.content ?? "",
-    });
+    const message =
+      data?.candidates?.[0]?.content?.parts
+        ?.map((part: any) => part.text ?? "")
+        .join("") ?? "";
+
+    return Response.json({ message });
   } catch (error) {
     console.error("Chat function error:", error);
 
