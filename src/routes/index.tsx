@@ -134,7 +134,7 @@ function Landing() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 w-full min-w-0">
             {[
               { icon: MessageSquare, title: t("landing.highlight1_title"), desc: t("landing.highlight1_desc") },
               { icon: ImageIcon, title: t("landing.highlight2_title"), desc: t("landing.highlight2_desc") },
