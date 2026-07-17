@@ -147,7 +147,7 @@ function Landing() {
             ].map(({ icon: Icon, title, desc }, i) => (
               <Fragment key={title}>
                 <div
-                  className="relative p-6 md:p-8 rounded-3xl bg-card border border-[#e0e0e0] dark:border-white/10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-shadow"
+                  className="relative w-full min-w-0 max-w-full overflow-hidden p-6 md:p-8 rounded-3xl bg-card border border-[#e0e0e0] dark:border-white/10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-shadow"
                 >
                   <span className="absolute top-3 right-4 text-[10px] font-medium text-muted-foreground/60">0{i + 1}</span>
                   <div className="relative h-11 w-11 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-4">
